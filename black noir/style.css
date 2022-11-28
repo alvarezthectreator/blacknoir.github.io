@@ -1,0 +1,233 @@
+:root{
+    --primary:#fff;
+    --secondary:#a2a2a2;
+    --accent:#e2c78c;
+}
+body{
+    margin: 0;
+    background: #151517;
+    font-family: 'poppins', sans-serif;
+    overflow-x: hidden;
+}
+*{
+    box-sizing: border-box;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background: #111;
+}
+::-webkit-scrollbar-thumb{
+    background: var( --accent);
+}
+a{
+ 
+    text-decoration: none;
+    transition: 0.3s;
+    color: var(--primary);
+}
+a:hover{
+    color: var( --accent);
+}
+p{
+    color: var(--secondary);
+}
+ul{
+    list-style-type:none;
+    padding: 0;
+    margin: 0;
+}
+.container{
+    max-width: 1350px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: start;
+    align-items: center;
+
+}
+header{
+    background-image: linear-gradient(90deg,#2c2c2e, #151517);
+    min-height: 100vh;
+    color: var(--primary);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+   
+}
+header main{
+    width: 100%;
+    margin: 0 0 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    flex-direction: column;
+}
+.main-image{
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    mix-blend-mode:  color-dodge;
+}
+nav .container,
+.header-body .container{
+    padding: 1.65em 2.5em;
+}
+.brand{
+    font-size: 2em;
+    font-weight: 600;
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} nav ul li {
+    margin: 0 1.5em 0 0;
+}
+nav ul a{
+    padding-bottom: 0.7em;
+}
+.link-active{
+    color: #e2c78c;
+    border-bottom: 2px var(--accent) solid;
+}
+.menu-btn{
+    background: transparent;
+    padding: 2.2em;
+    cursor: pointer;
+    transition: 1.3s;
+
+}
+.menu-btn:hover{
+    background: #4f4f4f;
+}
+nav .menu-btm{
+    display: none;
+    padding: 0;
+    justify-self: end;
+}
+aside{
+    background: #2c2c2e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+    flex-direction: column; 
+    border-right: 1px #373739 solid;
+    position: relative;
+    z-index: 1;
+}
+.social{
+    padding-bottom: 3em;
+    
+}
+.social li{
+    margin: 1.2em 0;
+    transform: rotate(-90deg);
+}
+.menu{
+    background: #111;
+    padding: 2em;
+    height: 100%;
+    width: 20em;
+    position: absolute;
+    top: 0;
+    left: -20em;
+    transition: 500ms cubic-bezier(.74,-0.03,.83,.67);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    z-index: 0;
+}
+.menu ul{
+    margin: 3em;
+
+}
+.menu li{
+    padding: 0.5em 0;
+    margin: 0.5em;
+    border-bottom: 1px #191919 solid;
+}
+.menu open{
+    left: 6em;
+}
+.header-body .container > div{
+    max-width: 32em;
+}
+.progress{
+    width: 50%;
+    height: 2px;
+    background: #191919;
+}
+.progress div{
+    width: 33%;
+    height: 100%;
+    background: var(--accent);
+    transition: 0.5 ;
+}
+.slider-cntrl{
+    font-size: 0.8em;
+    cursor: pointer;
+    transition: 0.5s;
+    transform: none;
+}
+.slider-cntrl:hover{
+    color: var(--primary);
+}
+.active{
+    color: var(--primary);
+    transform: scale(1.1),translateX(2em);
+}
+.title{
+    font-size:3em;
+    line-height: 1.2em;
+    margin: 0.5em 0;
+}
+.pagination-mobile{
+    display: none;
+
+
+}
+.pagination-mobile li{
+    background: var(--secondary);
+    margin: 0 0.7 0 0;
+    display: inline-block;
+    width: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.header-bottom {
+    background: rgba(5, 5, 5, 0.5);
+    backdrop-filter:blur(1px) ;
+}
+.header-bottom .container > div{
+display: flex;
+justify-content: flex-start;
+
+
+}
+.item{
+    padding: 1.5em 2em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.item-centered{
+    margin: 0 auto;
+}
+.header-bottom h4{
+    margin: 00.5em 0;
+}
+.item small:nth-of-type(1){
+    color: var(--secondary);
+
+}
+.header-bottom a{
+    margin-top: 1em;
+    color: var(--accent);
+    font-weight: 600;
+    letter-spacing: 2px;
+}
